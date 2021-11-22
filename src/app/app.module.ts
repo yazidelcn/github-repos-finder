@@ -19,6 +19,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth/';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { FontAwesomeModule,FaIconLibrary } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase), 
     AngularFireAuthModule,
+    FontAwesomeModule,
      // auth
   ],
   providers: [],
