@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit , ChangeDetectorRef} from '@angular/core';
 import { GithubService } from 'src/app/services/github.service';
-
+import { faFolder } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-repos',
   templateUrl: './repos.component.html',
@@ -9,6 +9,8 @@ import { GithubService } from 'src/app/services/github.service';
 export class ReposComponent implements OnInit,OnChanges {
   @Input() repoUrl?: string; 
   repos =[];
+  faFolder=faFolder;
+  
   constructor(private github:GithubService, 
     private ref:ChangeDetectorRef) { }
 
