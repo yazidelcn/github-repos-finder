@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
   }
   onSubmit(f: NgForm){
     const {email, password} = f.form.value;
-    this.auth.signIn(email,password)
+    this.auth.signUp(email,password)
         .then((res)=>{
           this.router.navigateByUrl('/');
           this.toastr.success('Signup Successfully')

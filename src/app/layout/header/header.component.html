@@ -28,7 +28,7 @@
             </a>
             
 
-            <a *ngIf="email" class="nav-item nav-link" [routerLink]="['/']">
+            <a *ngIf="email" class="nav-item nav-link" [routerLink]="['/']" (click)="handleSignout()">
                 <fa-icon [icon]="faSignOutAlt"></fa-icon> Logout
             </a>
         </div>

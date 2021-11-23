@@ -15,7 +15,18 @@ export class ReposComponent implements OnInit,OnChanges {
   ngOnInit(): void {
   } 
 
-  ngOnChanges(): void{
+  ngOnChanges(): void {
+    if (this.repoUrl) {
+      this.github.getRepos(this.repoUrl).subscribe(
+        (repos: []) => {
+          this.repos = repos;
 
+          this.ref.detectChanges();
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    }
   }
 }
